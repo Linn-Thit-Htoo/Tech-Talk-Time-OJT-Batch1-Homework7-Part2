@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --main-color: #b9dbf4;
+  --button-color: #5c573e;
+  --secondary-color: #fceeb0;
+}
+
+#contactUs {
+  width: 90%;
+  /* Adjust width for smaller screens */
+  max-width: 714px;
+  margin: 9vh auto;
+  padding-bottom: 2em;
+  background-color: var(--main-color);
+}
+
+fieldset {
+  max-width: 90%;
+  /* Adjust max-width for smaller screens */
+  border: none;
+  padding: 2em 0;
+  margin: 0 auto;
+}
+
+legend {
+  font-size: 2em;
+}
+
+label {
+  display: block;
+  margin: 28px 0;
+}
+
+.red {
+  color: #f00;
+}
+
+input::placeholder {
+  text-indent: 20px;
+}
+
+#contactUs input,
+#contactUs textarea {
+  margin: 15px 0;
+  /* Adjust margin for better spacing on small screens */
+  width: 100%;
+  min-height: 38px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  height: 22px;
+  font-size: 22px;
+  background-color: var(--button-color);
+  min-width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  #contactUs {
+    width: 90%;
+  }
+
+  fieldset {
+    max-width: 90%;
+  }
+
+  #contactUs input,
+  #contactUs textarea {
+    margin: 10px 0;
+  }
+
+  input[type="submit"] {
+    width: 80%;
+  }
+}
+

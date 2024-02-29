@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../Styles/commonStyle.css">
+  <link rel="stylesheet" href="../Styles/contactUs.css">
+</head>
+
+<body>
+
+  <!-- start nav bar -->
+  <nav id="header-nav">
+    <!-- start logo -->
+    <a id="logo" href="../index.html">S<span>I</span>DK</a>
+    <!-- end logo -->
+    <div>
+      <input type="search" placeholder="Search for products" id="search" tabindex="6">
+      <button tabindex="7"><span id="buttonIcon"></span></button>
+    </div>
+
+    <nav id="option">
+      <a href="../index.html" class="nav_link " accesskey="A" tabindex="1">
+        Home
+      </a>
+      <a href="../Pages/healthBenefits.html" class="nav_link " accesskey="H" tabindex="2">
+        HealthBenefits
+      </a>
+      <a href="contactUs.html" class="nav_link selected_nav" accesskey="C" tabindex="3">
+        ContactUs
+      </a>
+
+      <div class="dropdown">
+        <a href="desks.html" class="nav_link" tabindex="4">Desks &#x2BC6;
+        </a>
+        <div class="dropdown-content">
+          <a href="desks.html">Adjustable desks</a>
+          <a href="desks.html">Laptop stands</a>
+          <a href="desks.html">Exercise desks</a>
+          <a href="desks.html">Standing desks for gamers</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="Basket">
+      <a href="Basket.html" accesskey="B" tabindex="5">
+        <span id="BasketIcon"></span>
+        <!-- <img src="./Images/BasketIcon.png" alt="BasketIcon"> -->
+      </a>
+    </div>
+  </nav>
+  <!-- end nav bar  -->
+
+  <form id="contactUs">
+    <fieldset>
+      <legend>Contact Us:</legend>
+      <label id="first_name-label" for="First_name">First Name:<span class="red">*</span> <input id="First_name"
+          type="text" placeholder="Enter your first name" autofocus aria-required="true" required></label>
+
+      <label id="last_name-label" for="Last_name">Last Name:<span class="red">*</span> <input id="Last_name" type="text"
+          placeholder="Enter your last name" aria-required="true" required></label>
+
+
+      <label id="email" for="emails">Email:<span class="red">*</span> <input id="emails" type="email"
+          placeholder="Enter your email" aria-required="true" required></label>
+
+
+      <label for="comment">
+        Describe your request:
+        <textarea id="comment" cols="30" rows="10" placeholder="Enter your words here ......." ></textarea>
+      </label>
+
+      <input type="submit" id="submit" value="Send Message">
+    </fieldset>
+  </form>
+
+  <!-- footer start -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="../index.html">about us</a></li>
+            <li><a href="desks.html">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="contactUs.html">FAQ</a></li>
+            <li><a href="desks.html">shipping</a></li>
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="desks.html">Adjustable desks</a></li>
+            <li><a href="desks.html">Laptop stands</a></li>
+            <li><a href="desks.html">Exercise desks</a></li>
+            <li><a href="desks.html">Standing desks for gamers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i id="facebookIcon"></i></a>
+            <a href="#"><i id="twitterIcon"></i></a>
+            <a href="#"><i id="instagramIcon"></i></a>
+            <a href="#"><i id="whatAppIcon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+</body>
+
+</html>

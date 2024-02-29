@@ -1,0 +1,159 @@
+#body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#main {
+  width: 60%;
+  height: auto;
+}
+
+#BasketIcon::before {
+  color: #f25042;
+}
+
+#search {
+    text-align: initial;
+}
+
+
+/* Basket section styles */
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 9vh;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+tbody tr:not(:nth-last-child(1)){
+  border-bottom: 2px solid rgba(0,0,0,.15);
+}
+
+#basket img {
+  max-width: 100px;
+}
+
+input {
+  width: 40px;
+  text-align: center;
+}
+
+.remove {
+  width: 100%; /* Full width on mobile */
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background-color: #a31d28;
+}
+
+.total {
+  text-align: right;
+}
+
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%; /* Full width on mobile */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+}
+
+#total, #total-price {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+/* Media Queries for Tablet Screens */
+@media only screen and (max-width: 768px) {
+
+  #body {
+    justify-content: flex-start;
+  }
+
+  #main {
+    width: 40%;
+  }
+
+  #basket img {
+    max-width: 80px; /* Adjust image size for tablets */
+  }
+
+  th, td {
+    font-size: 12px; /* Adjust font size for small screens */
+    padding: 10px;
+  }
+
+  #basket img {
+    max-width: 60px; /* Adjust image size for mobiles */
+  }
+
+  input {
+    width: 30px; /* Adjust input width for mobiles */
+  }
+
+  .remove, .checkout-btn {
+    font-size: 14px; /* Adjust button font size for mobiles */
+  }
+
+  .checkout-btn {
+    font-size: 8px;
+  }
+}
+
+/* Media Queries for Screens Less Than 400px */
+@media only screen and (max-width: 400px) {
+
+  #body {
+    justify-content: center;
+  }
+
+  th, td {
+    font-size: 10px; /* Adjust font size for very small screens */
+    padding: 8px;
+  }
+
+  #basket img {
+    max-width: 50px; /* Adjust image size for very small screens */
+  }
+
+  input {
+    width: 25px; /* Adjust input width for very small screens */
+  }
+
+  .remove, .checkout-btn {
+    font-size: 12px; /* Adjust button font size for very small screens */
+  }
+
+  #total, #total-price {
+    font-size: 18px; /* Adjust total font size for very small screens */
+  }
+
+  .checkout-btn {
+    font-size: 8px;
+  }
+}
+

@@ -1,0 +1,630 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --main-color: #b9dbf4;
+  --button-color: #5c573e;
+  --secondary-color: #fceeb0;
+}
+
+#welcome_pop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: -17.5vh;
+  left: 40%;
+  width: 25vw;
+  height: 10vh;
+  z-index: 11;
+  border-radius: 15px;
+  box-shadow: 2px -3px 31px 0px rgba(0, 0, 0, 0.65);
+  background-color: #ffffff;
+  animation: pop 3s ease-in-out ;
+    
+}
+
+#welcome_pop p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@keyframes pop {
+  0% {
+    top: -17.5vh;
+  }
+
+  50% {
+    top: 5px;
+  }
+
+  75% {
+    top: 5px;
+  }
+
+  100% {
+    top: -17.5vh;
+  }
+}
+
+
+#body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#main {
+  width: 95%;
+  height: auto;
+}
+
+#intro {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  
+  background-color: var(--main-color);
+}
+
+#main #intro #intro_text {
+  width: 40%;
+  height: auto;
+  margin: 5% 0 0 10%;
+  padding-top: 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#intro h1 {
+  font-size: 7vh;
+}
+
+#intro p {
+  font-size: 17px;
+}
+
+/* #intro_slide {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 9%;
+  right: 10%;
+  width: 60vh;
+  height: 60vh;
+  background-color: pink;
+} */
+
+
+
+/* #intro img {
+  position: absolute;
+  top: 9%;
+  right: 10%;
+  width: 60vh;
+  height: 60vh;
+} */
+
+#intro_slide {
+  position: relative;
+  top: -62%;
+  right: -63%;
+  width: 60vh;
+  height: 60vh;
+  overflow: hidden;
+
+}
+
+#intro_slide img {
+  width: 60vh;
+  height: 60vh;
+}
+
+#slide_img {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  animation: slideshow 9s linear infinite;
+}
+
+
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: -25%;
+  }
+  40% {
+    left: -50%;
+  }
+  60% {
+    left: -100%;
+  }
+  80% {
+    left: -200%;
+  }
+  100% {
+    left: -250%;
+  }
+}
+
+
+
+
+#intro #intro_button {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: var(--button-color);
+  margin: 5% 0 0 10%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* Apply styles for screens larger than 768px width */
+
+  #intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+  
+
+  #intro #intro_text {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  #intro #intro_text h1 {
+    font-size: 2.5em;
+  } 
+
+  #intro_slide {
+    display: none;
+    position: relative;
+  }
+
+  #intro #intro_button {
+    position: inherit;
+    width: auto;
+    margin: 10px auto;
+  }
+}
+
+
+
+#newest_products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 5vh 0;
+}
+
+#newest_products>h2 {
+  align-self: flex-start;
+  margin-left: 5%;
+}
+
+#newest_list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  /* Adjust max-width based on your design */
+  margin: 0 auto;
+}
+
+.display {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  /* Adjust max-width based on your design */
+  height: auto;
+  overflow: hidden;
+  background-color: #fffffe;
+  border-radius: 10px;
+  transition: all 1s;
+  margin-bottom: 20px;
+}
+
+.container:hover {
+  box-shadow: 1px 9px 20px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s;
+}
+
+.container>img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.container>.description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px 20px 20px 10px;
+  position: relative;
+}
+
+.container>.description>.name {
+  font-size: larger;
+}
+
+.container>.description>.price {
+  font-weight: 300;
+  font-size: medium;
+  margin: 10px 0 10px 0;
+}
+
+.container .description .buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: var(--button-color);
+  margin-top: 10px;
+}
+
+/* user feedback */
+#feedback {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#usercommand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#user1,
+#user2,
+#user3 {
+  width: 300px;
+  margin: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: all 1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#user1:hover,
+#user2:hover,
+#user3:hover {
+  box-shadow: 1px 9px 20px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s;
+}
+
+#usercommand div img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  #user1,
+  #user2,
+  #user3 {
+    width: 100%;
+  }
+}
+/* #feedback {
+  width: 100%;
+  height: auto;
+}
+
+#usercommand {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100vw;
+}
+
+#usercommand div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 30%;
+  max-height: 30vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#usercommand div p {
+  font-size: 14px;
+  overflow: hidden;
+}
+
+
+#usercommand div img {
+  max-width: 5vw;
+  aspect-ratio: 1/1;
+}
+
+@media only screen and (max-width: 768px) {
+  #usercommand  {
+    flex-direction: column;
+  }
+} */
+
+
+/* Benefits style  */
+#Benefits {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 5vh 0;
+  /* Adjust padding based on your design */
+  background-color: var(--secondary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Benefits #Health_Benefits {
+  align-self: flex-start;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+#Benefits #Benefits_content {
+  display: flex;
+  flex-direction: column;
+  /* Change to column for smaller screens */
+  width: 100%;
+  height: auto;
+  align-items: center;
+  /* Center content */
+}
+
+#Benefits #text {
+  display: block;
+  width: 90%;
+  /* Adjust width for smaller screens */
+  max-width: 800px;
+  /* Add max-width for larger screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+#Benefits .vedio {
+  margin-top: -5%;
+  margin-right: 4%;
+  width: 40%;
+  height: 50vh;
+  /* Adjust width for smaller screens */
+  max-width: 800px;
+  /* Add max-width for larger screens */
+}
+
+/* social style */
+
+#social {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px;
+  height: auto;
+}
+
+#social #questions,
+#social #social-link {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  /* Adjust width for smaller screens */
+  height: auto;
+  background-color: var(--main-color);
+  /* Change background color based on design */
+}
+
+#social #questions p,
+#social #social-link p {
+  margin: 20px 0;
+  /* Adjust margin for better spacing on small screens */
+}
+
+#social #questions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* Adjust width for smaller screens */
+  height: 40px;
+  color: white;
+  background-color: var(--button-color);
+  margin: 10px auto;
+  /* Adjust margin for better spacing on small screens */
+}
+
+#social #social-link nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+#social #social-link nav a img {
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #newest_list {
+    flex-direction: row;
+  }
+
+  
+
+
+  #Benefits #Benefits_content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #Benefits #text {
+    width: 50%;
+    margin-left: 5%;
+  
+  }
+
+
+  #social {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 70vh;
+  }
+
+  #social #questions,
+  #social #social-link {
+    width: 45%;
+    height: 70%;
+  }
+
+  #social #questions a {
+    width: 100px;
+  }
+
+  #welcome_pop p {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  #Benefits {
+    width: 100%;
+    height: auto;
+
+  }
+
+  #Benefits_content {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #Benefits .vedio {
+    height: 20vh;
+  }
+
+  #social {
+    margin-bottom: 50px;
+  
+  }
+
+  #social-link {
+    margin-bottom: 50px;
+  }
+
+  #social #questions a {
+    width: 50vw;
+  }
+  
+  #welcome_pop p {
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  #main #intro #intro_text {
+    width: 60%;
+    height: auto;
+    margin: 2% 0 0 10%; 
+  }
+  
+  #intro_button {
+    padding: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 1197px) {
+  
+  #intro h1 {
+    font-size: 5vh;
+  }
+  
+  #intro p {
+    font-size: 2vh;
+  }
+  
+  
+  #intro img {
+    width: 45vh;
+    aspect-ratio: 1/1;
+  }
+
+  #newest_list {
+    max-width: 600px;
+  }
+
+  #Benefits .vedio {
+    width: 40vw;
+    aspect-ratio: 1/1;
+    margin-top: -4vh;
+    margin-left: 2%;
+  }
+
+  #text {
+    font-size: 13px;
+  }
+
+  #intro_slide {
+    top: -45%;
+    width: 40vh;
+    height: 40vh;
+  }
+
+  #intro_slide img {
+    width: 40vh;
+    height: 40vh;
+  }
+}
